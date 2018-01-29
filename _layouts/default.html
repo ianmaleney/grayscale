@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body>
+    <img class="bck_img" src="/assets/images/gsheroblur-720.jpg">
+    <main class="main" aria-label="Content">
+      <div class="main__head">
+        <div id="canvas__wrapper"></div>
+        <div class="title__logo--wrapper buzz_wrapper">
+          <div class="text">
+            <span>grayscale</span>
+          </div>
+        </div>
+      </div>
+      <div class="main__body">
+         {{ content }}
+      </div>
+    </main>
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/glitch.js"></script>
+  </body>
+
+</html>

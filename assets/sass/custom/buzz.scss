@@ -1,0 +1,99 @@
+.buzz_wrapper span{
+  position:absolute;
+  //filter: blur(1px);
+  font-size: calc(20px + 3vw);
+  font-family: 'grayscale', 'europa', fixed;
+  letter-spacing: 3px;
+}
+.buzz_wrapper span:nth-child(1){
+  color:red;
+  margin-left: -2px;
+  //filter: blur(2px);
+}
+.buzz_wrapper span:nth-child(2){
+  color:green;
+  margin-left: 2px;
+  filter: blur(2px);
+}
+.buzz_wrapper span:nth-child(3){
+  color:blue;
+  transform: translateY(20px);
+  filter: blur(1px);
+}
+.buzz_wrapper span:nth-child(4){
+  color:#fff;
+  filter: blur(1px);
+  text-shadow:0 0 50px rgba(255,255,255,0.4);
+}
+.buzz_wrapper span:nth-child(5){
+  color:rgba(255,255,255,0.4);
+  filter: blur(15px);
+}
+
+.buzz_wrapper span{
+  animation: blur 30ms infinite, jerk 50ms infinite;
+}
+
+@-webkit-keyframes blur {
+  0%   { opacity:0.8;}
+  50%  { opacity:1; }
+  100% { opacity:0.8; }
+}
+
+@-webkit-keyframes jerk {
+  50% { transform: translateX(1px); }
+  51% { transform: translateX(0); }
+}
+
+@-webkit-keyframes jerkup {
+  50% { transform: translateY(1px); }
+  51% { transform: translateY(0); }
+}
+
+.buzz_wrapper span:nth-child(3){
+  animation: jerkblue 1s infinite;
+}
+
+@-webkit-keyframes jerkblue {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(0); }
+  31%  { transform: translateX(10px); }
+  32%  { transform: translateX(0); }
+  98%  { transform: translateX(0); }
+  100% { transform: translateX(10px); }
+}
+
+.buzz_wrapper span:nth-child(2){
+ animation: jerkgreen 1s infinite;
+}
+
+@-webkit-keyframes jerkgreen {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(0); }
+  31%  { transform: translateX(-10px); }
+  32%  { transform: translateX(0); }
+  98%  { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
+}
+
+.buzz_wrapper .text{
+	animation: jerkwhole 5s infinite;
+	position: relative;
+}
+
+@-webkit-keyframes jerkwhole {
+  30% {  }
+  40% { opacity:1; transform: translateX(0) scale(1,1) skew(0,0); }
+  41% { opacity:0.8; transform: translateX(-100px) scale(1,1.2) skew(50deg,0); }
+  42% { opacity:0.8; transform: translateX(100px) scale(1,1.2) skew(-80deg,0); }
+  43% { opacity:1; transform: translateX(0) scale(1,1) skew(0,0); }
+  65% { }
+}
+
+/*.post.buzz_wrapper h1 {
+	display: block;
+}*/
+
+/*.post.buzz_wrapper h1 span {
+	font-family: 'europa';
+}*/

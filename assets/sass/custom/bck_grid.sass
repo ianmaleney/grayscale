@@ -1,0 +1,24 @@
+.bck__grid
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr 1fr
+	grid-gap: 1px
+	z-index: 0
+
+.bck__grid__item
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-template-rows: 1fr 1fr 1fr
+	grid-gap: 1px
+
+.bck__sub-grid__item
+	background: #0dbbcd
+	transition: opacity 0.1s linear
+	filter: blur(1px)
+	&.black
+		animation: flicker 0.5s infinite
