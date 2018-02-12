@@ -91,12 +91,13 @@ header {
 }
 
 .site-title--scroll {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 20vw;
   font-size: calc(1px + 40vw);
-  color: rgba(63, 63, 63, 0.3);
-  font-family: 'grayscale', 'amador';
+  /*color: rgba(63, 63, 63, 0.3);*/
+  color: rgba(231, 231, 231, 0.1);
+  font-family: 'amador';
   text-transform: uppercase;
   font-weight: bold;
   animation: titleScroll 300s linear infinite;
