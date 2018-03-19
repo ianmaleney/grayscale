@@ -34,7 +34,9 @@
   }
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -75,7 +77,7 @@ header {
   opacity: 0;
   border: none;
   filter: grayscale(1) contrast(1.4);
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   transform: translateY(100px);
   transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-delay: 200ms;
@@ -97,7 +99,7 @@ header {
   font-size: calc(1px + 40vw);
   /*color: rgba(63, 63, 63, 0.3);*/
   color: rgba(231, 231, 231, 0.1);
-  font-family: 'amador';
+  font-family: "amador";
   text-transform: uppercase;
   font-weight: bold;
   animation: titleScroll 300s linear infinite;
@@ -105,7 +107,7 @@ header {
 }
 
 .site-title {
-  font-family: 'europa';
+  font-family: "europa";
   position: absolute;
   top: 20px;
   left: 30px;
@@ -126,15 +128,15 @@ header {
   transition-delay: 200ms;
 }
 
-.site-intro.visible, #c.visible {
+.site-intro.visible,
+#c.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-
 .site-intro p {
   color: black;
-  font-family: 'europa';
+  font-family: "europa";
   font-weight: 800;
   font-size: 40px;
   letter-spacing: 0.5px;
@@ -157,7 +159,7 @@ header {
   grid-column: 1 / 2;
   grid-row-start: 2;
   color: white;
-  font-family: 'europa';
+  font-family: "europa";
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -214,7 +216,11 @@ main {
   font-size: 1.4rem;
   line-height: 2.1rem;
   margin: 50px auto;
-  font-family: 'europa';
+  font-family: "europa";
+}
+
+.post:first-of-type {
+  margin-top: 20px;
 }
 
 .post h1 {
@@ -222,7 +228,68 @@ main {
   line-height: 5rem;
 }
 
+.post img {
+  max-width: 100%;
+}
 
 .question {
-  color: rgba(63,100,205,1);
+  color: rgba(63, 100, 205, 1);
+}
+
+@media (max-width: 960px) {
+  .site-title {
+    width: 100vw;
+    z-index: 200;
+    background-color: black;
+    height: 35px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0 10px 40px;
+    font-size: 12px;
+  }
+
+  .image-effect-wrapper,
+  .site-intro {
+    display: none;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    z-index: 999;
+  }
+
+  .primary-menu-wrapper {
+    font-size: 12px;
+  }
+
+  main {
+    top: 35px;
+  }
+
+  .content-wrapper {
+    width: calc(100vw - 40px);
+    margin-left: 40px;
+  }
+
+  .post h1 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .post h1 {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .post p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
