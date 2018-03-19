@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body>
+	{% include post-header.html %}
+
+	<main>
+		<h2>{{page.category}}</h2>
+		<div class="content-wrapper">
+			 {% for post in site.categories.[page.category] %}
+			<div class="post post_in_list">
+				<a href="{{post.permalink}}">
+					{% if post.featured_image %}
+					<img class="post-index-image" src="{{ post.featured_image }}" /> {% endif %}
+					<h2 class="post-index-title">
+						{{ post.title }}
+					</h2>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</main>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
