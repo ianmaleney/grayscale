@@ -8,11 +8,9 @@
 # Site settings
 title: Grayscale
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Grayscale was founded in 2017 with the aim of bringing together the most exciting contemporary music and visual art in a series of one-off events in interesting spaces around Dublin. Each unique event fosters collaborations between artists from these different disciplines, and allows them to present their work to the very highest standard.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://grayscale.ie" # the base hostname & protocol for your site
 
 # Markdown settings
 markdown: kramdown
