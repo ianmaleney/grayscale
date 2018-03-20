@@ -3,12 +3,12 @@ title: "Grayscale + Hidden Agenda Present: The Shape of Dublin to Come, with Lor
 layout: post
 permalink: /lorenzo
 date: 2017-12-08 12:00:00
-featured_image: /assets/images/senni.png
+featured_image: /assets/images/senni.jpg
 category: events
 tags: lorenzo 'Lorenzo Senni' 'The Shape of Dublin to Come' 'Hidden Agenda' 'Grayscale' 'The Button Factory' Elll Clu
 ---
 
-![Lorenzo Senni]({{ "/assets/images/senni.png" | absolute_url }})
+![Lorenzo Senni]({{ "/assets/images/senni.jpg" | absolute_url }})
 
 **Lorenzo Senni (Warp)**<br />
 **Support from: ELLLL + CLU**<br />
