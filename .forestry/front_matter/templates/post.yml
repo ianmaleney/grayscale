@@ -1,0 +1,36 @@
+---
+hide_body: false
+fields:
+- type: text
+  label: Title
+  name: title
+  description: The title of the post.
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  description: What date should the post be published?
+  config:
+    date_format: DD/MM/YYYY
+    required: true
+- type: select
+  name: category
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - interviews
+    - events
+  label: Category
+  description: 'Post Category: Event or Interview'
+  default: interviews
+- type: file
+  name: featured_image
+  label: Featured Image
+  description: Image which will be displayed on the front of the site.
+- type: tag_list
+  name: tags
+  label: Tags
+  description: Useful tags related to the post.
