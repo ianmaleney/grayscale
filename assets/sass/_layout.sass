@@ -1,0 +1,23 @@
+main 
+  position: relative
+  z-index: 1
+  @media (max-width: 960px)
+    top: 35px
+  p
+    a
+      background-color: $pink
+      &:hover
+        background-color: darken($pink, 5%)
+
+.content-wrapper 
+  background-color: $white
+  width: calc(100vw - 100px)
+  margin: 0 auto
+  padding: 3vw 20px
+  @media (max-width: 960px) 
+    width: calc(100vw - 40px)
+    margin-left: 40px
+
+
+
+

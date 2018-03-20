@@ -1,0 +1,230 @@
+/*****************/
+//
+// Header Styles //
+//
+/*****************/
+
+.image-effect-wrapper 
+  width: 50vw
+  position: relative
+  margin: 0 auto
+  grid-column: 6 / 12
+  grid-row: 2 / 5
+
+#c 
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  border: none
+  filter: grayscale(1) contrast(1.4)
+  background-color: $black
+  transform: translateY(100px)
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  transition-delay: 200ms
+  will-change: transform
+
+#c.move 
+  animation: canvasMove 6.5s linear forwards
+
+#c.invisible 
+  visibility: hidden
+
+.site-title--scroll 
+  position: fixed
+  top: 0
+  left: 20vw
+  font-size: calc(1px + 40vw)
+  color: rgba(231, 231, 231, 0.02)
+  font-family: "amador"
+  text-transform: uppercase
+  font-weight: bold
+  animation: titleScroll 300s linear infinite
+  z-index: -1
+
+
+.site-title 
+  font-family: $europa
+  position: absolute
+  top: 20px
+  left: 30px
+  font-size: 16px
+  letter-spacing: 2px
+  text-transform: uppercase
+  color: $white
+  a:hover 
+    color: $pink
+  @media (max-width: 960px) 
+    width: 100vw
+    z-index: 200
+    background-color: $black
+    height: 35px
+    position: fixed
+    top: 0
+    left: 0
+    padding: 10px 0 10px 40px
+    font-size: 12px
+
+.site-intro 
+  grid-column: 3 / 8
+  grid-row-start: 3
+  position: relative
+  z-index: 2
+  opacity: 0
+  transform: translateY(100px)
+  transition: all 1s $ease
+  transition-delay: 200ms
+
+
+.site-intro.visible,
+#c.visible 
+  opacity: 1
+  transform: translateY(0)
+
+
+.site-intro p 
+  color: black
+  font-family: $europa
+  font-weight: 800
+  font-size: 40px
+  letter-spacing: 0.5px
+  line-height: 50px
+  padding: 35px
+  margin: 0
+  background-color: $pink
+
+
+/******************/
+//
+// Primary Menu  //
+//
+/*****************/
+
+.primary-menu-wrapper 
+  grid-column: 1 / 2
+  grid-row-start: 2
+  color: $white
+  font-family: $europa
+  font-size: 16px
+  letter-spacing: 2px
+  text-transform: uppercase
+  margin-left: -12px
+  position: fixed
+  top: calc(100vh / 6)
+  left: -5px
+  will-change: transform
+  z-index: 5
+
+
+.primary-menu 
+  list-style-type: none
+  display: flex
+  margin-left: 5px
+  padding-top: 0
+  -webkit-transform: rotate(180deg)
+  transform: rotate(180deg)
+  transform-origin: center
+  -webkit-writing-mode: vertical-rl
+  writing-mode: vertical-rl
+
+
+.primary-menu__item 
+  padding: 16px 12px
+  margin: 0 12px
+
+
+.primary-menu__item a 
+  color: $white
+  text-decoration: none
+
+
+.primary-menu__item a:hover 
+  color: $pink
+
+
+.primary-menu__item:last-of-type 
+  padding-bottom: 0
+  margin-bottom: 0
+
+
+
+/*******************/
+//
+// Post Styles ****/
+/*
+/******************/
+
+.post 
+  max-width: 35em
+  font-size: 1.4rem
+  line-height: 2.1rem
+  margin: 50px auto
+  font-family: $europa
+
+
+.post:first-of-type 
+  margin-top: 20px
+
+
+.post h1 
+  font-size: 3.5rem
+  line-height: 5rem
+  @media (max-width: 960px)
+    font-size: 2.5rem
+    line-height: 4rem
+  @media (max-width: 600px) 
+    font-size: 1.5rem
+    line-height: 2.2rem
+
+
+.post img 
+  max-width: 100%
+
+.post p 
+  @media (max-width: 600px) 
+    font-size: 1.2rem
+    line-height: 1.8rem
+
+
+.question 
+  color: #bf4f4f
+
+
+.post_in_list
+  margin: 4vw auto
+  padding-bottom: 3vw
+  border-bottom: 3px solid $black
+  position: relative
+  @media (min-width: 960px)
+    h2
+      position: absolute
+      font-size: 3rem
+      line-height: 4rem
+      opacity: 0
+      top: 30%
+      text-align: center
+      width: 80%
+      left: 10%
+      color: darken($pink, 30%)
+      transition: all 0.3s $ease
+    &:hover
+      img
+        filter: grayscale(1) contrast(3)
+        opacity: 0.1
+        transition: all 0.3s $ease
+      h2
+        opacity: 1
+  @media (max-width: 700px)
+    font-size: 1.2rem
+    line-height: 2.2rem
+        
+
+
+// Media Queries
+
+@media (max-width: 960px) 
+  .image-effect-wrapper,
+  .site-intro 
+    display: none
+  .primary-menu-wrapper 
+    font-size: 12px
